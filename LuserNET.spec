@@ -28,6 +28,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 A GNUStep news reader
 
+%description -l pl
+Czytnik news dla GNUStep
+
 %prep
 %setup -q
 %patch0 -p1

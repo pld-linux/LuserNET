@@ -1,5 +1,5 @@
-Summary:	Mail application for GNUstep
-Summary(pl):	Aplikacja pocztowa dla ¶rodowiska GNUstep
+Summary:	GNUstep news reader
+Summary(pl):	Czytnik news dla GNUstepa
 Name:		LuserNET
 Version:	0.4.2
 Release:	1
@@ -8,7 +8,7 @@ Group:		X11/Applications
 Source0:	http://w1.423.telia.com/~u42308495/alex/LuserNET/%{name}-%{version}.tar.gz
 # Source0-md5:	3d17d7462a3aba295246362a90db3ea1
 Patch0:		%{name}-initializeWithArguments.patch
-URL:		http://www.collaboration-world.com/gnumail/
+URL:		http://w1.423.telia.com/~u42308495/alex/LuserNET/LuserNET.html
 BuildRequires:	Pantomime-devel >= 1.1.2-4
 BuildRequires:	gnustep-gui-devel >= 0.9.1
 Requires:	Pantomime >= 1.1.2-4
@@ -26,10 +26,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %endif
 
 %description
-A GNUStep news reader
+A GNUstep news reader.
 
 %description -l pl
-Czytnik news dla GNUStep
+Czytnik news dla GNUstepa.
 
 %prep
 %setup -q
@@ -60,6 +60,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %dir %{_prefix}/System/Applications/LuserNET.app
 %attr(755,root,root) %{_prefix}/System/Applications/LuserNET.app/LuserNET
+%dir %{_prefix}/System/Applications/LuserNET.app/%{gscpu}
+%dir %{_prefix}/System/Applications/LuserNET.app/%{gscpu}/%{gsos}
+%dir %{_prefix}/System/Applications/LuserNET.app/%{gscpu}/%{gsos}/%{libcombo}
 %attr(755,root,root) %{_prefix}/System/Applications/LuserNET.app/%{gscpu}/%{gsos}/%{libcombo}/LuserNET
 %{_prefix}/System/Applications/LuserNET.app/%{gscpu}/%{gsos}/%{libcombo}/library_paths.openapp
 

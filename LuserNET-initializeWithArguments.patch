@@ -1,0 +1,30 @@
+diff -ur o-LuserNet-0.4.2/main.m LuserNET-0.4.2/main.m
+--- o-LuserNet-0.4.2/main.m	2004-03-02 16:58:37.000000000 -0700
++++ LuserNET-0.4.2/main.m	2004-11-13 15:08:05.775772888 -0700
+@@ -7,6 +7,7 @@
+ #include <Foundation/NSUserDefaults.h>
+ #include <Foundation/NSPathUtilities.h>
+ #include <Foundation/NSBundle.h>
++#include <Foundation/NSProcessInfo.h>
+ #include <AppKit/NSApplication.h>
+ #include <AppKit/NSMenu.h>
+ #include <AppKit/NSWindow.h>
+@@ -423,13 +424,17 @@
+ @end
+ 
+ 
+-int main(int argc, char **argv)
++int main(int argc, char **argv, char **env)
+ {
+ 	AppDelegate *ad;
+ 	NSApplication *a;
+ 
+ 	CREATE_AUTORELEASE_POOL(arp);
+ 
++#ifdef GS_PASS_ARGUMENTS
++	[NSProcessInfo initializeWithArguments: argv count: argc environment: env];
++#endif
++
+ //	[NSObject enableDoubleReleaseCheck: YES];
+ 
+ 	a=[NSApplication sharedApplication];

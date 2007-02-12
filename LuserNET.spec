@@ -1,5 +1,5 @@
 Summary:	GNUstep news reader
-Summary(pl):	Czytnik news dla GNUstepa
+Summary(pl.UTF-8):   Czytnik news dla GNUstepa
 Name:		LuserNET
 Version:	0.4.2
 Release:	1
@@ -28,7 +28,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 A GNUstep news reader.
 
-%description -l pl
+%description -l pl.UTF-8
 Czytnik news dla GNUstepa.
 
 %prep

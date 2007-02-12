@@ -1,5 +1,5 @@
 Summary:	GNUstep news reader
-Summary(pl.UTF-8):   Czytnik news dla GNUstepa
+Summary(pl.UTF-8):	Czytnik news dla GNUstepa
 Name:		LuserNET
 Version:	0.4.2
 Release:	1

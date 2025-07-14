@@ -33,7 +33,7 @@ Czytnik news dla GNUstepa.
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 . %{_prefix}/System/Library/Makefiles/GNUstep.sh
